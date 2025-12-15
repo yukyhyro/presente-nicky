@@ -1,0 +1,269 @@
+:root{
+  --bg1:#ffe6f0;
+  --bg2:#ffd1dc;
+  --card:#ffffffd6;
+  --text:#1f1f1f;
+  --muted:#555;
+  --accent:#ff2d6f;
+  --accent2:#a855f7;
+  --shadow: 0 20px 60px rgba(0,0,0,.15);
+  --radius: 22px;
+  --font: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+*{ box-sizing:border-box; }
+body{
+  margin:0;
+  min-height:100vh;
+  font-family:var(--font);
+  color:var(--text);
+  display:grid;
+  place-items:center;
+  padding:24px;
+  overflow-x:hidden;
+  background: radial-gradient(1200px 700px at 20% 10%, var(--bg1), transparent 60%),
+              radial-gradient(1200px 700px at 80% 90%, var(--bg2), transparent 60%),
+              linear-gradient(135deg, #fff, #ffe6ea);
+}
+
+.hearts{
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  z-index:-1;
+  overflow:hidden;
+}
+.heart{
+  position:absolute;
+  font-size: 18px;
+  opacity: .85;
+  filter: drop-shadow(0 6px 18px rgba(255,45,111,.25));
+  animation: floatUp linear forwards;
+}
+@keyframes floatUp{
+  from { transform: translateY(110vh) translateX(0) scale(1); opacity:0; }
+  10% { opacity:.9; }
+  to { transform: translateY(-15vh) translateX(var(--drift)) scale(var(--scale)); opacity:0; }
+}
+
+.card{
+  width:min(1040px, 100%);
+  background:var(--card);
+  backdrop-filter: blur(10px);
+  border:1px solid rgba(255,255,255,.65);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 22px;
+}
+
+.top{ padding: 8px 10px 16px 10px; }
+.badge{
+  display:inline-flex; gap:8px; align-items:center;
+  font-weight:800; color:#fff;
+  background: linear-gradient(90deg, var(--accent), var(--accent2));
+  padding:8px 12px; border-radius: 999px; font-size: 14px;
+}
+h1{ margin:14px 0 6px; font-size: clamp(26px, 3.2vw, 40px); }
+.subtitle{ margin:0; color:var(--muted); }
+
+.content{
+  display:grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap:18px;
+  padding: 10px;
+}
+
+.carousel{
+  position:relative;
+  border-radius: var(--radius);
+  overflow:hidden;
+  border:1px solid rgba(0,0,0,.06);
+  background: rgba(255,255,255,.55);
+}
+.viewport{ width:100%; overflow:hidden; }
+.track{
+  display:flex;
+  transition: transform .35s ease;
+  will-change: transform;
+}
+.track img{
+  width:100%;
+  flex: 0 0 100%;
+  height: 380px;
+  object-fit: cover;
+  display:block;
+}
+
+.nav{
+  position:absolute;
+  top:50%;
+  transform: translateY(-50%);
+  border:0;
+  width:42px; height:42px;
+  border-radius: 999px;
+  cursor:pointer;
+  background: rgba(255,255,255,.75);
+  box-shadow: 0 10px 25px rgba(0,0,0,.12);
+  font-size: 26px;
+  font-weight: 900;
+  display:grid;
+  place-items:center;
+}
+.nav:hover{ filter: brightness(1.03); }
+.prev{ left:10px; }
+.next{ right:10px; }
+
+.dots{
+  position:absolute;
+  left:0; right:0; bottom:10px;
+  display:flex;
+  justify-content:center;
+  gap:8px;
+}
+.dot{
+  width:10px; height:10px;
+  border-radius: 999px;
+  border:0;
+  cursor:pointer;
+  background: rgba(255,255,255,.7);
+  box-shadow: 0 8px 18px rgba(0,0,0,.12);
+}
+.dot.active{
+  background: linear-gradient(90deg, var(--accent), var(--accent2));
+  transform: scale(1.15);
+}
+
+.text h2{ margin: 8px 0 10px; }
+
+.timeline{
+  display:grid;
+  gap:10px;
+  margin: 8px 0 14px;
+}
+.titem{
+  display:grid;
+  grid-template-columns: 76px 1fr;
+  gap:10px;
+  align-items:start;
+  padding: 10px 12px;
+  border-radius: 16px;
+  background: rgba(255,255,255,.55);
+  border: 1px solid rgba(0,0,0,.06);
+}
+.tdate{
+  font-weight: 900;
+  color: #fff;
+  background: linear-gradient(90deg, var(--accent), var(--accent2));
+  border-radius: 12px;
+  padding: 8px 10px;
+  text-align:center;
+}
+.ttext{
+  color: var(--muted);
+  line-height: 1.6;
+  padding-top: 2px;
+}
+
+.buttons{ display:flex; gap:10px; flex-wrap:wrap; margin: 10px 0 6px; }
+
+.btn{
+  border:0; cursor:pointer;
+  padding: 12px 16px;
+  border-radius: 14px;
+  font-weight: 800;
+  color:#fff;
+  background: linear-gradient(90deg, var(--accent), var(--accent2));
+  box-shadow: 0 12px 30px rgba(255,45,111,.22);
+  transition: transform .12s ease, filter .12s ease;
+}
+.btn:hover{ transform: translateY(-1px); filter: brightness(1.03); }
+.btn:active{ transform: translateY(0px) scale(.99); }
+
+.btn.ghost{
+  background: rgba(255,255,255,.6);
+  color: #222;
+  border: 1px solid rgba(0,0,0,.08);
+  box-shadow:none;
+}
+
+.hint{ margin: 8px 0 0; color: var(--muted); font-size: 14px; }
+
+.bottom{
+  margin-top: 6px;
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-end;
+  gap:12px;
+  padding: 10px;
+  color: var(--muted);
+}
+.name{ color: var(--text); font-weight: 900; }
+
+.modal{
+  position:fixed; inset:0;
+  display:grid; place-items:center;
+  background: rgba(0,0,0,.35);
+  padding: 20px;
+  z-index: 50;
+}
+.modal.hidden{ display:none; }
+.modal-card{
+  width:min(620px, 100%);
+  background:#fff;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 18px 18px 14px;
+}
+.modal-card h3{
+  text-align:center;
+  margin: 6px 0 6px;
+}
+
+.poem{
+  font-style: italic;
+  font-size: 17px;
+  line-height: 2;
+  color: #444;
+  text-align: center;
+  padding: 6px 4px 10px;
+}
+.poem p{ margin: 0; }
+.poem strong{
+  font-style: normal;
+  font-size: 22px;
+  color: #ff2d6f;
+  display:block;
+  margin-bottom: 10px;
+}
+
+.modal-actions{ display:flex; justify-content:flex-end; margin-top: 12px; }
+
+@media (max-width: 800px){
+  .content{ grid-template-columns: 1fr; }
+  .track img{ height: 320px; }
+  .bottom{ flex-direction:column; align-items:flex-start; }
+}
+@media (max-width: 600px){
+  .poem{ font-size: 16px; line-height: 1.9; }
+}
+
+.reveal{
+  opacity: 0;
+  transform: translateY(18px) scale(.985);
+  filter: blur(6px);
+  transition:
+    opacity .55s ease,
+    transform .55s cubic-bezier(.2,.8,.2,1),
+    filter .55s ease;
+  will-change: opacity, transform, filter;
+}
+.reveal.is-visible{
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  filter: blur(0);
+}
+
+.top.reveal{ transition-delay: .02s; }
+.carousel.reveal{ transition-delay: .06s; }
+.text.reveal{ transition-delay: .10s; }
+.bottom.reveal{ transition-delay: .14s; }

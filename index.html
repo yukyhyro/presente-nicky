@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pra você, Nicky 💖</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="hearts" aria-hidden="true"></div>
+
+  <main class="card">
+    <header class="top reveal">
+      <div class="badge">💌 presente</div>
+      <h1>Nicky, meu amor 💖</h1>
+      <p class="subtitle">
+        Um cantinho só nosso — pra guardar o que a gente vive e o que eu sinto por você.
+      </p>
+    </header>
+
+    <section class="content">
+      <div class="carousel reveal" aria-label="Carrossel de fotos">
+        <button class="nav prev" id="prev" aria-label="Foto anterior">‹</button>
+
+        <div class="viewport">
+          <div class="track" id="track">
+            <img src="fotos/1.jpg" alt="Gu e Nicky - Foto 1">
+            <img src="fotos/2.jpg" alt="Gu e Nicky - Foto 2">
+            <img src="fotos/3.jpg" alt="Gu e Nicky - Foto 3">
+            <img src="fotos/4.jpg" alt="Gu e Nicky - Foto 4">
+            <img src="fotos/5.jpg" alt="Gu e Nicky - Foto 5">
+          </div>
+        </div>
+
+        <button class="nav next" id="next" aria-label="Próxima foto">›</button>
+
+        <div class="dots" id="dots" aria-label="Indicadores do carrossel"></div>
+      </div>
+
+      <div class="text reveal">
+        <h2>Nossa linha do tempo 💞</h2>
+
+        <div class="timeline">
+          <div class="titem">
+            <div class="tdate">14/09</div>
+            <div class="ttext">O dia em que eu me apaixonei por você.</div>
+          </div>
+          <div class="titem">
+            <div class="tdate">28/09</div>
+            <div class="ttext">Nosso primeiro beijo… e o dia em que eu me declarei.</div>
+          </div>
+          <div class="titem">
+            <div class="tdate">15/11</div>
+            <div class="ttext">O início do nosso namoro — e do meu capítulo favorito.</div>
+          </div>
+        </div>
+
+        <div class="buttons">
+          <button id="btnMusic" class="btn">▶ Tocar nossa música</button>
+          <button id="btnSurpresa" class="btn ghost">🌷 Teu jardim</button>
+        </div>
+
+        <p class="hint">Dica: no celular dá pra arrastar as fotos pro lado 😉</p>
+      </div>
+    </section>
+
+    <footer class="bottom reveal">
+      <p>Com carinho, <span class="name">Gu</span> 💗</p>
+      <small id="counter"></small>
+    </footer>
+  </main>
+
+  <audio id="music" src="musica.mp3" preload="auto"></audio>
+
+  <div id="modal" class="modal hidden" role="dialog" aria-modal="true">
+    <div class="modal-card reveal">
+      <h3>Pra você, Nicky 💖</h3>
+
+      <div id="poem" class="poem">
+        <p>
+          <strong>Teu jardim</strong><br><br>
+
+          Plantei teu nome em meu peito,<br>
+          num solo manso e gentil.<br>
+          Reguei com versos, com jeito,<br>
+          com o orvalho mais sutil.<br><br>
+
+          O vento veio, sereno,<br>
+          trouxe o perfume do chão;<br>
+          em cada broto pequeno<br>
+          batia o meu coração.<br><br>
+
+          Aprendi que amor se cria<br>
+          com tempo, toque e calor,<br>
+          e que a flor da companhia<br>
+          floresce ao toque do amor.<br><br>
+
+          Teu riso é sol que desperta,<br>
+          meu dia nasce de ti;<br>
+          mesmo a distância é deserta<br>
+          se não te ouço por aqui.<br><br>
+
+          Se o mundo seca, eu insisto,<br>
+          te rego com meu olhar;<br>
+          pois quem já provou teu misto<br>
+          de paz, não quer mais cessar.<br><br>
+
+          E quando a noite descansa,<br>
+          no silêncio que é jardim,<br>
+          teu nome cresce, e a esperança<br>
+          se abre inteira em mim.
+        </p>
+      </div>
+
+      <div class="modal-actions">
+        <button id="btnClose" class="btn">Fechar</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
