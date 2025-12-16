@@ -191,7 +191,6 @@ body{
 .stat-value{ font-weight: 1000; font-size: 18px; margin-top: 4px; }
 
 .hero-actions{ display:flex; gap:10px; flex-wrap:wrap; margin-top: 12px; }
-.hint{ margin: 10px 0 0; color: var(--muted); }
 
 .btn{
   border:0; cursor:pointer;
@@ -581,3 +580,4 @@ body{
   .reasons{ grid-template-columns: 1fr; }
   .gallery{ grid-template-columns: 1fr 1fr; }
 }
+
