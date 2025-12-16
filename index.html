@@ -40,6 +40,7 @@
     <section id="inicio" class="card reveal hero">
       <div class="hero-left">
         <div class="pill">💌 presente de namoro</div>
+
         <h1 class="title">
           Nicky, meu amor 💖
           <span class="subtitle">feito pelo Gu, com todo carinho do mundo.</span>
@@ -60,10 +61,6 @@
           <button class="btn" id="btnOpenPoem">🌷 Ler “Teu jardim”</button>
           <a class="btn ghost" href="#mensagens">💞 Ver mensagens</a>
         </div>
-
-        <p class="hint">
-          Dica: para editar, é só mudar os textos no <strong>index.html</strong> e dar commit.
-        </p>
       </div>
 
       <div class="hero-right">
@@ -73,14 +70,13 @@
             Você virou meu lugar favorito. Seu riso me acalma, seu abraço me refaz.
             Obrigado por existir do jeitinho que você é. Eu escolho você, sempre.
           </div>
-          <div class="mini-foot">💗</div>
         </div>
 
         <div class="progress-card">
           <div class="progress-head">
             <div>
               <div class="mini-title">Rumo a 1 ano 💘</div>
-              <div class="mini-foot">Barra de progresso do nosso tempo juntos</div>
+              <div class="mini-foot">Barra do nosso tempo juntos</div>
             </div>
             <span class="badge" id="progressLabel">—</span>
           </div>
@@ -95,29 +91,24 @@
     <section id="fotos" class="card reveal section">
       <header class="section-head">
         <h2>Fotos nossas 📸</h2>
-        <p class="muted">Carrossel com 5 fotos (pode ser .jpeg ou .jpg — só manter o nome igual no código).</p>
+        <p class="muted">Alguns dos nossos momentos favoritos.</p>
       </header>
 
-      <div class="carousel" aria-label="Carrossel de fotos">
-        <button class="navbtn prev" id="prev" aria-label="Foto anterior">‹</button>
+      <div class="carousel">
+        <button class="navbtn prev" id="prev">‹</button>
 
         <div class="viewport">
           <div class="track" id="track">
-            <img src="fotos/1.jpeg" alt="Gu e Nicky - Foto 1">
-            <img src="fotos/2.jpeg" alt="Gu e Nicky - Foto 2">
-            <img src="fotos/3.jpeg" alt="Gu e Nicky - Foto 3">
-            <img src="fotos/4.jpeg" alt="Gu e Nicky - Foto 4">
-            <img src="fotos/5.jpeg" alt="Gu e Nicky - Foto 5">
+            <img src="fotos/1.jpeg" alt="Foto 1">
+            <img src="fotos/2.jpeg" alt="Foto 2">
+            <img src="fotos/3.jpeg" alt="Foto 3">
+            <img src="fotos/4.jpeg" alt="Foto 4">
+            <img src="fotos/5.jpeg" alt="Foto 5">
           </div>
         </div>
 
-        <button class="navbtn next" id="next" aria-label="Próxima foto">›</button>
-        <div class="dots" id="dots" aria-label="Indicadores do carrossel"></div>
-      </div>
-
-      <div class="row">
-        <button class="btn ghost" id="btnAuto">⏯️ Auto-play</button>
-        <button class="btn ghost" id="btnOpenLightbox">🔍 Ver foto atual</button>
+        <button class="navbtn next" id="next">›</button>
+        <div class="dots" id="dots"></div>
       </div>
     </section>
 
@@ -125,42 +116,38 @@
     <section id="timeline" class="card reveal section">
       <header class="section-head">
         <h2>Nossa linha do tempo 💞</h2>
-        <p class="muted">Os dias que viraram história.</p>
       </header>
 
       <div class="timeline">
-        <article class="titem">
+        <div class="titem">
           <div class="tdate">14/09</div>
           <div class="tcontent">
             <h3>Quando eu me apaixonei</h3>
             <p class="fixed-text">
-              Eu lembro como se fosse agora… alguma coisa em você me fez ter certeza.
-              Foi ali que o meu coração começou a te chamar de “lar”.
+              Foi ali que algo mudou em mim. Sem aviso, você virou casa.
             </p>
           </div>
-        </article>
+        </div>
 
-        <article class="titem">
+        <div class="titem">
           <div class="tdate">28/09</div>
           <div class="tcontent">
-            <h3>Primeiro beijo + minha declaração</h3>
+            <h3>Primeiro beijo e minha declaração</h3>
             <p class="fixed-text">
-              O mundo parou um segundo. E eu só pensei: “é ela”.
-              Obrigado por ter me deixado viver esse momento com você.
+              O mundo ficou silencioso por um instante. E eu só pensei: é ela.
             </p>
           </div>
-        </article>
+        </div>
 
-        <article class="titem">
+        <div class="titem">
           <div class="tdate">15/11</div>
           <div class="tcontent">
             <h3>O começo do nosso namoro</h3>
             <p class="fixed-text">
-              O dia que eu ganhei meu capítulo favorito. Desde então, tudo faz mais sentido —
-              porque é com você.
+              O dia em que ganhei meu capítulo favorito.
             </p>
           </div>
-        </article>
+        </div>
       </div>
     </section>
 
@@ -168,40 +155,20 @@
     <section id="mensagens" class="card reveal section">
       <header class="section-head">
         <h2>Mensagens fofas ✍️</h2>
-        <p class="muted">Essas mensagens são fixas: sempre aparecem do mesmo jeito em qualquer lugar.</p>
       </header>
 
       <div class="grid2">
         <div class="note">
           <div class="note-title">Coisas que eu amo em você</div>
           <p class="fixed-text">
-            Eu amo o seu sorriso, o seu jeito, o seu carinho.
-            Amo como você transforma o comum em especial.
-            Amo como você me faz querer ser melhor sem nem perceber.
-          </p>
-        </div>
-
-        <div class="note">
-          <div class="note-title">Promessas bobas (mas sinceras)</div>
-          <p class="fixed-text">
-            Eu prometo te cuidar, te respeitar e te ouvir.
-            Prometo ser seu abrigo nos dias ruins e sua risada nos dias bons.
-            Prometo te escolher — com calma, com verdade e com amor.
-          </p>
-        </div>
-
-        <div class="note">
-          <div class="note-title">Lembrança favorita</div>
-          <p class="fixed-text">
-            (coloque aqui uma lembrança bem específica de vocês — vai ficar lindo!)
+            Seu sorriso, seu cuidado, seu jeito de tornar tudo mais leve.
           </p>
         </div>
 
         <div class="note">
           <div class="note-title">O que eu quero viver com você</div>
           <p class="fixed-text">
-            Eu quero viver uma vida leve do seu lado: planos, viagens, domingos preguiçosos,
-            conquistas e paz. Quero construir um “nós” que seja casa.
+            Uma vida inteira de momentos simples, risadas sinceras e amor tranquilo.
           </p>
         </div>
       </div>
@@ -211,16 +178,13 @@
     <section id="motivos" class="card reveal section">
       <header class="section-head">
         <h2>Motivos que eu te amo 💗</h2>
-        <p class="muted">Clique em “Sortear” pra aparecer um motivo aleatório (fixo no código).</p>
       </header>
 
-      <div class="row">
-        <button class="btn" id="btnRandom">🎲 Sortear um motivo</button>
-      </div>
+      <button class="btn" id="btnRandom">🎲 Sortear um motivo</button>
 
       <div class="reason-highlight">
         <div class="reason-big" id="motivoSorteado">Clique no botão 💞</div>
-        <div class="reason-small" id="motivoNumero">—</div>
+        <div class="reason-small" id="motivoNumero"></div>
       </div>
 
       <div class="reasons" id="reasons"></div>
@@ -230,140 +194,53 @@
     <section id="cartinhas" class="card reveal section">
       <header class="section-head">
         <h2>Cartinhas pra você 💌</h2>
-        <p class="muted">Clique em um envelope para abrir.</p>
       </header>
 
       <div class="letters">
-        <button class="letter" data-letter="1" aria-label="Abrir cartinha 1">💌</button>
-        <button class="letter" data-letter="2" aria-label="Abrir cartinha 2">💌</button>
-        <button class="letter" data-letter="3" aria-label="Abrir cartinha 3">💌</button>
+        <button class="letter" data-letter="1">💌</button>
+        <button class="letter" data-letter="2">💌</button>
+        <button class="letter" data-letter="3">💌</button>
       </div>
-
-      <p class="tiny muted">Essas cartinhas são fixas no código e vão aparecer sempre.</p>
     </section>
 
     <!-- PLAYLIST -->
     <section id="playlist" class="card reveal section">
       <header class="section-head">
         <h2>Nossa playlist 🎶</h2>
-        <p class="muted">
-          Troque o link do Spotify no <code>src</code> abaixo.
-          (Spotify → 3 pontinhos → Compartilhar → Incorporar → copiar link do embed)
-        </p>
       </header>
 
-      <div class="playlist">
-        <!-- EXEMPLO: troque pelo seu embed -->
-        <iframe style="border-radius:12px"
-          src="https://open.spotify.com/embed/playlist/37i9dQZF1DX50QitC6Oqtn"
-          width="100%" height="380"
-          frameBorder="0"
-          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
-        </iframe>
-
-        <!-- Opcional: YouTube (descomente e coloque seu VIDEO_ID)
-        <iframe width="100%" height="315"
-          src="https://www.youtube.com/embed/VIDEO_ID"
-          frameborder="0"
-          allowfullscreen>
-        </iframe>
-        -->
-      </div>
+      <iframe style="border-radius:12px"
+        src="https://open.spotify.com/embed/playlist/37i9dQZF1DX50QitC6Oqtn"
+        width="100%" height="380"
+        frameborder="0"
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+      </iframe>
     </section>
 
-    <!-- GALERIA EXTRA -->
+    <!-- GALERIA -->
     <section id="galeria" class="card reveal section">
       <header class="section-head">
-        <h2>Galeria extra 🌟</h2>
-        <p class="muted">Coloque quantas fotos quiser em <code>galeria/</code>.</p>
+        <h2>Galeria 🌸</h2>
       </header>
 
-      <div class="gallery" id="gallery">
-        <button class="gimg" data-src="galeria/1.jpeg" aria-label="Abrir galeria 1"><img src="galeria/1.jpeg" alt="Galeria 1"></button>
-        <button class="gimg" data-src="galeria/2.jpeg" aria-label="Abrir galeria 2"><img src="galeria/2.jpeg" alt="Galeria 2"></button>
-        <button class="gimg" data-src="galeria/3.jpeg" aria-label="Abrir galeria 3"><img src="galeria/3.jpeg" alt="Galeria 3"></button>
+      <div class="gallery">
+        <img src="galeria/1.jpeg">
+        <img src="galeria/2.jpeg">
+        <img src="galeria/3.jpeg">
       </div>
     </section>
 
     <footer class="footer reveal">
       <div class="footer-card">
         <div class="footer-title">Feito com amor pelo Gu 💞</div>
-        <div class="fixed-text">
-          Obrigado por ser minha paz, meu riso, minha pessoa favorita.
-          Eu te amo, Nicky.
-        </div>
+        <p class="fixed-text">
+          Obrigado por ser minha pessoa favorita. Eu te amo, Nicky.
+        </p>
       </div>
     </footer>
   </main>
 
-  <!-- Áudio -->
-  <audio id="music" src="musica.mp3" preload="auto"></audio>
-
-  <!-- Modal do poema -->
-  <div id="modalPoem" class="modal hidden" role="dialog" aria-modal="true">
-    <div class="modal-card">
-      <div class="modal-head">
-        <h3>🌷 Teu jardim</h3>
-        <button class="chip" id="closePoem" type="button">✕</button>
-      </div>
-
-      <div class="poem">
-        <p>
-          <strong>Teu jardim</strong><br><br>
-
-          Plantei teu nome em meu peito,<br>
-          num solo manso e gentil.<br>
-          Reguei com versos, com jeito,<br>
-          com o orvalho mais sutil.<br><br>
-
-          O vento veio, sereno,<br>
-          trouxe o perfume do chão;<br>
-          em cada broto pequeno<br>
-          batia o meu coração.<br><br>
-
-          Aprendi que amor se cria<br>
-          com tempo, toque e calor,<br>
-          e que a flor da companhia<br>
-          floresce ao toque do amor.<br><br>
-
-          Teu riso é sol que desperta,<br>
-          meu dia nasce de ti;<br>
-          mesmo a distância é deserta<br>
-          se não te ouço por aqui.<br><br>
-
-          Se o mundo seca, eu insisto,<br>
-          te rego com meu olhar;<br>
-          pois quem já provou teu misto<br>
-          de paz, não quer mais cessar.<br><br>
-
-          E quando a noite descansa,<br>
-          no silêncio que é jardim,<br>
-          teu nome cresce, e a esperança<br>
-          se abre inteira em mim.
-        </p>
-      </div>
-    </div>
-  </div>
-
-  <!-- Lightbox (carrossel + galeria) -->
-  <div id="modalLightbox" class="modal hidden" role="dialog" aria-modal="true">
-    <div class="lightbox">
-      <button class="chip" id="closeLightbox" type="button">✕</button>
-      <img id="lightboxImg" alt="Imagem ampliada">
-    </div>
-  </div>
-
-  <!-- Modal cartinhas -->
-  <div id="modalLetter" class="modal hidden" role="dialog" aria-modal="true">
-    <div class="modal-card">
-      <div class="modal-head">
-        <h3 id="letterTitle">💌 Cartinha</h3>
-        <button class="chip" id="closeLetter" type="button">✕</button>
-      </div>
-      <div class="fixed-text" id="letterBody"></div>
-    </div>
-  </div>
-
+  <audio id="music" src="musica.mp3"></audio>
   <script src="script.js"></script>
 </body>
 </html>
