@@ -1,246 +1,110 @@
 <!doctype html>
 <html lang="pt-br">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8">
   <title>Gu & Nicky 💖</title>
-  <meta name="description" content="Um presente de namoro feito com amor." />
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="hearts" aria-hidden="true"></div>
 
-  <header class="nav">
-    <div class="nav-inner">
-      <div class="brand">
-        <span class="logo">💗</span>
-        <span class="brand-text">Gu & Nicky</span>
-      </div>
+<div class="hearts"></div>
 
-      <nav class="links" aria-label="Navegação">
-        <a href="#inicio">Início</a>
-        <a href="#fotos">Fotos</a>
-        <a href="#timeline">Linha do tempo</a>
-        <a href="#mensagens">Mensagens</a>
-        <a href="#motivos">Motivos</a>
-        <a href="#cartinhas">Cartinhas</a>
-        <a href="#playlist">Playlist</a>
-        <a href="#galeria">Galeria</a>
-      </nav>
+<header class="nav">
+  <div class="nav-inner">
+    <div class="brand">💗 Gu & Nicky</div>
 
-      <div class="nav-actions">
-        <button id="btnTheme" class="chip" type="button" aria-label="Alternar tema">🌙</button>
-        <button id="btnMusic" class="chip" type="button">▶ Música</button>
-      </div>
+    <nav class="links">
+      <a href="#inicio">Início</a>
+      <a href="#fotos">Fotos</a>
+      <a href="#timeline">Linha do tempo</a>
+      <a href="#mensagens">Mensagens</a>
+      <a href="#motivos">Motivos</a>
+      <a href="#cartinhas">Cartinhas</a>
+      <a href="#playlist">Playlist</a>
+      <a href="#galeria">Galeria</a>
+    </nav>
+
+    <div class="nav-actions">
+      <button id="btnTheme" class="chip">🌙</button>
+      <button id="btnMusic" class="chip">▶ Música</button>
     </div>
-  </header>
+  </div>
+</header>
 
-  <main class="container">
-    <!-- HERO -->
-    <section id="inicio" class="card reveal hero">
-      <div class="hero-left">
-        <div class="pill">💌 presente de namoro</div>
+<main class="container">
 
-        <h1 class="title">
-          Nicky, meu amor 💖
-          <span class="subtitle">feito pelo Gu, com todo carinho do mundo.</span>
-        </h1>
+<section id="inicio" class="card reveal hero">
+  <h1>Nicky, meu amor 💖</h1>
+  <p class="subtitle">feito pelo Gu, com todo carinho do mundo.</p>
 
-        <div class="stats">
-          <div class="stat">
-            <div class="stat-label">Namorando há</div>
-            <div class="stat-value" id="counter">—</div>
-          </div>
-          <div class="stat">
-            <div class="stat-label">Começou em</div>
-            <div class="stat-value">15/11/2025 • 16:30</div>
-          </div>
-        </div>
+  <div class="stats">
+    <div><strong>Namorando há:</strong> <span id="counter">—</span></div>
+    <div><strong>Desde:</strong> 15/11/2025 • 16:30</div>
+  </div>
+</section>
 
-        <div class="hero-actions">
-          <button class="btn" id="btnOpenPoem">🌷 Ler “Teu jardim”</button>
-          <a class="btn ghost" href="#mensagens">💞 Ver mensagens</a>
-        </div>
-      </div>
+<section id="fotos" class="card reveal">
+  <h2>Fotos nossas 📸</h2>
+  <div class="carousel">
+    <button id="prev">‹</button>
+    <div class="track" id="track">
+      <img src="fotos/1.jpeg">
+      <img src="fotos/2.jpeg">
+      <img src="fotos/3.jpeg">
+      <img src="fotos/4.jpeg">
+      <img src="fotos/5.jpeg">
+    </div>
+    <button id="next">›</button>
+  </div>
+</section>
 
-      <div class="hero-right">
-        <div class="mini-card">
-          <div class="mini-title">Um resumo do que eu sinto</div>
-          <div class="fixed-text">
-            Você virou meu lugar favorito. Seu riso me acalma, seu abraço me refaz.
-            Obrigado por existir do jeitinho que você é. Eu escolho você, sempre.
-          </div>
-        </div>
+<section id="timeline" class="card reveal">
+  <h2>Linha do tempo 💞</h2>
+  <p>14/09 — quando eu me apaixonei</p>
+  <p>28/09 — primeiro beijo e declaração</p>
+  <p>15/11 — início do nosso namoro</p>
+</section>
 
-        <div class="progress-card">
-          <div class="progress-head">
-            <div>
-              <div class="mini-title">Rumo a 1 ano 💘</div>
-              <div class="mini-foot">Barra do nosso tempo juntos</div>
-            </div>
-            <span class="badge" id="progressLabel">—</span>
-          </div>
-          <div class="progress">
-            <div class="bar" id="progressBar"></div>
-          </div>
-        </div>
-      </div>
-    </section>
+<section id="mensagens" class="card reveal">
+  <h2>Mensagens fofas ✍️</h2>
+  <p>Você é meu lugar seguro, meu sorriso fácil, minha melhor escolha.</p>
+</section>
 
-    <!-- CARROSSEL -->
-    <section id="fotos" class="card reveal section">
-      <header class="section-head">
-        <h2>Fotos nossas 📸</h2>
-        <p class="muted">Alguns dos nossos momentos favoritos.</p>
-      </header>
+<section id="motivos" class="card reveal">
+  <h2>Motivos que eu te amo 💗</h2>
+  <button onclick="sortearMotivo()">🎲 Sortear um motivo</button>
+  <p id="motivoSorteado">Clique no botão 💞</p>
+</section>
 
-      <div class="carousel">
-        <button class="navbtn prev" id="prev">‹</button>
+<section id="cartinhas" class="card reveal">
+  <h2>Cartinhas 💌</h2>
+  <p>Prometo te escolher todos os dias, cuidar de você e crescer ao seu lado.</p>
+</section>
 
-        <div class="viewport">
-          <div class="track" id="track">
-            <img src="fotos/1.jpeg" alt="Foto 1">
-            <img src="fotos/2.jpeg" alt="Foto 2">
-            <img src="fotos/3.jpeg" alt="Foto 3">
-            <img src="fotos/4.jpeg" alt="Foto 4">
-            <img src="fotos/5.jpeg" alt="Foto 5">
-          </div>
-        </div>
+<section id="playlist" class="card reveal">
+  <h2>Nossa playlist 🎶</h2>
+  <iframe style="border-radius:12px"
+    src="https://open.spotify.com/embed/playlist/37i9dQZF1DX50QitC6Oqtn"
+    width="100%" height="380" frameborder="0"></iframe>
+</section>
 
-        <button class="navbtn next" id="next">›</button>
-        <div class="dots" id="dots"></div>
-      </div>
-    </section>
+<section id="galeria" class="card reveal">
+  <h2>Galeria 🌸</h2>
+  <div class="gallery">
+    <img src="galeria/1.jpeg">
+    <img src="galeria/2.jpeg">
+    <img src="galeria/3.jpeg">
+  </div>
+</section>
 
-    <!-- TIMELINE -->
-    <section id="timeline" class="card reveal section">
-      <header class="section-head">
-        <h2>Nossa linha do tempo 💞</h2>
-      </header>
+<footer class="card reveal">
+  <p>Feito com amor pelo Gu 💞</p>
+</footer>
 
-      <div class="timeline">
-        <div class="titem">
-          <div class="tdate">14/09</div>
-          <div class="tcontent">
-            <h3>Quando eu me apaixonei</h3>
-            <p class="fixed-text">
-              Foi ali que algo mudou em mim. Sem aviso, você virou casa.
-            </p>
-          </div>
-        </div>
+</main>
 
-        <div class="titem">
-          <div class="tdate">28/09</div>
-          <div class="tcontent">
-            <h3>Primeiro beijo e minha declaração</h3>
-            <p class="fixed-text">
-              O mundo ficou silencioso por um instante. E eu só pensei: é ela.
-            </p>
-          </div>
-        </div>
-
-        <div class="titem">
-          <div class="tdate">15/11</div>
-          <div class="tcontent">
-            <h3>O começo do nosso namoro</h3>
-            <p class="fixed-text">
-              O dia em que ganhei meu capítulo favorito.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- MENSAGENS -->
-    <section id="mensagens" class="card reveal section">
-      <header class="section-head">
-        <h2>Mensagens fofas ✍️</h2>
-      </header>
-
-      <div class="grid2">
-        <div class="note">
-          <div class="note-title">Coisas que eu amo em você</div>
-          <p class="fixed-text">
-            Seu sorriso, seu cuidado, seu jeito de tornar tudo mais leve.
-          </p>
-        </div>
-
-        <div class="note">
-          <div class="note-title">O que eu quero viver com você</div>
-          <p class="fixed-text">
-            Uma vida inteira de momentos simples, risadas sinceras e amor tranquilo.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- MOTIVOS -->
-    <section id="motivos" class="card reveal section">
-      <header class="section-head">
-        <h2>Motivos que eu te amo 💗</h2>
-      </header>
-
-      <button class="btn" id="btnRandom">🎲 Sortear um motivo</button>
-
-      <div class="reason-highlight">
-        <div class="reason-big" id="motivoSorteado">Clique no botão 💞</div>
-        <div class="reason-small" id="motivoNumero"></div>
-      </div>
-
-      <div class="reasons" id="reasons"></div>
-    </section>
-
-    <!-- CARTINHAS -->
-    <section id="cartinhas" class="card reveal section">
-      <header class="section-head">
-        <h2>Cartinhas pra você 💌</h2>
-      </header>
-
-      <div class="letters">
-        <button class="letter" data-letter="1">💌</button>
-        <button class="letter" data-letter="2">💌</button>
-        <button class="letter" data-letter="3">💌</button>
-      </div>
-    </section>
-
-    <!-- PLAYLIST -->
-    <section id="playlist" class="card reveal section">
-      <header class="section-head">
-        <h2>Nossa playlist 🎶</h2>
-      </header>
-
-      <iframe style="border-radius:12px"
-        src="https://open.spotify.com/embed/playlist/37i9dQZF1DX50QitC6Oqtn"
-        width="100%" height="380"
-        frameborder="0"
-        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
-      </iframe>
-    </section>
-
-    <!-- GALERIA -->
-    <section id="galeria" class="card reveal section">
-      <header class="section-head">
-        <h2>Galeria 🌸</h2>
-      </header>
-
-      <div class="gallery">
-        <img src="galeria/1.jpeg">
-        <img src="galeria/2.jpeg">
-        <img src="galeria/3.jpeg">
-      </div>
-    </section>
-
-    <footer class="footer reveal">
-      <div class="footer-card">
-        <div class="footer-title">Feito com amor pelo Gu 💞</div>
-        <p class="fixed-text">
-          Obrigado por ser minha pessoa favorita. Eu te amo, Nicky.
-        </p>
-      </div>
-    </footer>
-  </main>
-
-  <audio id="music" src="musica.mp3"></audio>
-  <script src="script.js"></script>
+<audio id="music" src="musica.mp3"></audio>
+<script src="script.js"></script>
 </body>
 </html>
