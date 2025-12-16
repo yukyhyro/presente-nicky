@@ -547,9 +547,9 @@ body{
 
 /* Reveal */
 .reveal{
-  opacity: 0;
-  transform: translateY(18px) scale(.985);
-  filter: blur(6px);
+  opacity: 1;
+  transform: none;
+  filter: none;
   transition:
     opacity .55s ease,
     transform .55s cubic-bezier(.2,.8,.2,1),
@@ -581,3 +581,4 @@ body{
   .reasons{ grid-template-columns: 1fr; }
   .gallery{ grid-template-columns: 1fr 1fr; }
 }
+
