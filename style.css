@@ -494,6 +494,8 @@ body{
   z-index: 80;
 }
 .hidden{ display:none; }
+
+/* ✅ ALTERADO: modal-card agora cabe no celular e permite rolagem */
 .modal-card{
   width: min(720px, 100%);
   background: var(--card);
@@ -501,7 +503,13 @@ body{
   box-shadow: var(--shadow);
   border: 1px solid rgba(255,255,255,.35);
   padding: 16px;
+
+  /* NOVO (corrige poema cortado no mobile) */
+  max-height: 85vh;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
 }
+
 .modal-head{
   display:flex;
   align-items:center;
@@ -524,6 +532,19 @@ body{
   color: var(--accent);
   display:block;
   margin-bottom: 10px;
+}
+
+/* ✅ NOVO: garante que o <p> do poema não fique com margens estranhas */
+.poem p{
+  margin: 0;
+}
+
+/* ✅ NOVO: no celular, poema um pouquinho menor pra caber melhor */
+@media (max-width: 700px){
+  .poem{
+    font-size: 16px;
+    line-height: 1.85;
+  }
 }
 
 .lightbox{
@@ -580,4 +601,3 @@ body{
   .reasons{ grid-template-columns: 1fr; }
   .gallery{ grid-template-columns: 1fr 1fr; }
 }
-
